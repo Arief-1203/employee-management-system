@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee List</title>
+  <link rel="stylesheet" href="employee-list.css">
+</head>
+<body>
+
+<div class="list-header">
+  <h1>Employee List</h1>
+<div class="search-container">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by Name, Email or Phone..."
+  />
+</div>
+
+ <div class="export-dropdown">
+  <button class="btn-export" onclick="toggleExportMenu()">
+    Export ⌄
+  </button>
+
+  <div id="exportMenu" class="export-menu">
+    <button onclick="exportCSV()">Export CSV</button>
+    <button onclick="exportExcel()">Export Excel</button>
+    <button onclick="exportPDF()">Export PDF</button>
+    <button onclick="printTable()">Print</button>
+  </div>
+</div>
+
+  <a href="index.html" class="btn-add">+ Add Employee</a>
+
+</div>
+<div class="filter-container">
+  <select id="statusFilter">
+    <option value="all">All Status</option>
+    <option value="active">Active</option>
+    <option value="inactive">Inactive</option>
+  </select>
+</div>
+
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+      <th>
+      <input type="checkbox" id="selectAll">
+      </th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Department</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="employeeTableBody"></tbody>
+  </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="employee-list.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+}
+
+/* Page header */
+.list-header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header h1 {
+  margin: 0;
+}
+
+/* Add button */
+.btn-add {
+  background: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Table container */
+.table-container {
+  padding: 30px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+thead {
+  background: #1e3c72;
+  color: white;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+/* Action buttons */
+.btn-edit {
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.search-container input {
+  width: 380px;
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #1e3c72;
+  box-shadow: 0 0 0 4px rgba(30, 60, 114, 0.2);
+}
+.filter-container {
+  margin-left: 15px;
+}
+
+#statusFilter {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn-export {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-export:hover {
+  background: #157347;
+}
+.btn-excel {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn-excel:hover {
+  background: #0b5ed7;
+}
+
+.btn-pdf {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-pdf:hover {
+  background: #bb2d3b;
+}
+
+.btn-print {
+  background: #6f42c1;
+  color: white;
+}
+
+.btn-print:hover {
+  background: #59339d;
+}
+/* ===== EXPORT DROPDOWN ===== */
+.export-dropdown {
+  position: relative;
+}
+
+.btn-export {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-export:hover {
+  background: #187bcd;
+}
+
+.export-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: none;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.export-menu button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.export-menu button:hover {
+  background: #f1f4f9;
+}
+
+.export-menu {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.export-menu.show {
+  display: block;
+}
+
+
+

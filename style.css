@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f1f4f9;
+}
+
+/* Page */
+.page-wrapper {
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Form container */
+.form-container {
+  background: white;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 25px;
+  color: #1e3c72;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2a5298;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* Save Employee */
+.btn-primary {
+  background: #1e90ff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #187bcd;
+}
+
+/* Reset Button - Professional */
+.btn-warning {
+  background: #dc3545; /* soft danger red */
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background: #bb2d3b;
+}
+
+
+/* Back to Dashboard */
+.btn-cancel {
+  background: #212529; /* dark */
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background: #000;
+}
+.iti {
+  width: 100%;
+}
+
+.iti__country-list {
+  max-height: 200px;
+}
+
+
+
+
+
+
+
+

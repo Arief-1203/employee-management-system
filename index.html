@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <div class="header">
+    <h1>Employee Management</h1>
+    <button class="btn-dark" onclick="goToList()">Employee List</button>
+  </div>
+
+  <div class="form-container">
+    <h2 id="formTitle">Add Employee</h2>
+
+    <form id="employeeForm" onsubmit="saveEmployee(); return false;">
+
+      <input type="hidden" id="employee_id">
+
+      <div class="grid">
+
+        <div>
+          <label>First Name</label>
+          <input type="text" id="first_name" maxlength="20"
+                 oninput="validateTextOnly(this)" required>
+        </div>
+
+        <div>
+          <label>Last Name</label>
+          <input type="text" id="last_name" maxlength="20"
+                 oninput="validateTextOnly(this)" required>
+        </div>
+
+        <div>
+          <label>Gender</label>
+          <select id="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div>
+          <label>Date of Birth</label>
+          <input type="date" id="date_of_birth" required>
+        </div>
+
+        <div>
+          <label>Date of Joining</label>
+          <input type="date" id="date_of_joining" required>
+        </div>
+
+        <div>
+          <label>Phone Number</label>
+          <input
+  type="tel"
+  id="phone_number"
+  name="phone_number"
+  autocomplete="tel"
+  placeholder="Enter phone number"
+  required >
+
+        </div>
+
+
+<!-- Address Section -->
+<div style="grid-column: span 2;">
+  <label>Address</label>
+  <input
+    type="text"
+    id="address"
+    placeholder="House No, Street, Area"
+    required>
+</div>
+
+
+        <div>
+          <label>Salary</label>
+          <input type="text" id="salary" maxlength="7"
+                 oninput="validateNumberOnly(this)" required>
+        </div>
+
+        <div>
+          <label>Department</label>
+          <input type="text" id="department" maxlength="20"
+                 oninput="validateTextOnly(this)" required>
+        </div>
+
+        <div>
+          <label>Designation</label>
+          <input type="text" id="designation" maxlength="20"
+                 oninput="validateTextOnly(this)" required>
+        </div>
+
+        <div>
+          <label>Status</label>
+          <select id="status">
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary">Save Employee</button>
+       <button type="reset" class="btn-warning" id="resetBtn">
+  Reset
+</button>
+
+        <button type="button" class="btn-cancel" onclick="goToDashboard()">
+  Back to Dashboard
+</button>
+
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

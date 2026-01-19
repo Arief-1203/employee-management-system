@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="dashboard">
+  <h1>Employee Dashboard</h1>
+
+  <div class="cards">
+    <div class="card" id="totalCard">
+      <h2 id="totalEmployees">0</h2>
+      <p>Total Employees</p>
+    </div>
+
+    <div class="card active">
+      <h2 id="activeEmployees">0</h2>
+      <p>Active Employees</p>
+    </div>
+
+    <div class="card inactive">
+      <h2 id="inactiveEmployees">0</h2>
+      <p>Inactive Employees</p>
+    </div>
+
+    <div class="card dept">
+      <h2 id="departmentCount">0</h2>
+      <p>Departments</p>
+    </div>
+  </div>
+<div class="chart-section">
+  <div class="chart-box">
+    <h3>Employee Status</h3>
+    <canvas id="statusChart"></canvas>
+  </div>
+
+  <div class="chart-box">
+    <h3>Department Distribution</h3>
+    <canvas id="departmentChart"></canvas>
+  </div>
+</div>
+
+  <a href="index.html" class="btn">➕ Add Employee</a>
+  <a href="employee-list.html" class="btn">📋 Employee List</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>
