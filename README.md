@@ -5,35 +5,41 @@ The application provides a structured interface for managing employee records wi
 
 This project demonstrates practical implementation of CRUD operations, RESTful data access, and client-side data processing.
 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
 Overview
 
 The system is designed to manage organizational employee records in a centralized database. It supports creation, modification, deletion, retrieval, and exporting of employee data through a clean web-based interface backed by Supabase.
 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
 Key Features
 
-Full CRUD operations on employee records
+ • Full CRUD operations on employee records
 
-Search and status-based filtering
+ • Search and status-based filtering
 
-Input validation for critical fields
+ • Input validation for critical fields
 
-International phone number input with country code support
+ • International phone number input with country code support
 
-Data export functionality:
+ • Data export functionality:
 
-CSV
+   • CSV
 
-Excel (XLSX)
+   • Excel (XLSX)
 
-PDF
+   • PDF
 
-Print
+   • Print
 
-Selection and export of individual records
+ • Selection and export of individual records
 
-Responsive administrative interface
+ • Responsive administrative interface
 
-Cloud-hosted PostgreSQL database using Supabase
+ • Cloud-hosted PostgreSQL database using Supabase
+ 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 Technology Stack
 
@@ -57,7 +63,9 @@ SheetJS (xlsx)
 
 jsPDF, jsPDF-AutoTable
 
-Project Structure
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Project Structure:
 employee-management-system/
 │
 ├── index.html
@@ -75,38 +83,37 @@ employee-management-system/
 ├── supabase.js
 └── README.md
 
-Setup and Configuration
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Setup and Configuration:
 1. Clone the Repository
 bash
 git clone https://github.com/Arief-1203/employee-management-system.git
+
 cd employee-management-system
 
-3. Supabase Configuration
+2. Supabase Configuration
 
-Create a project at https://supabase.com
+ • Create a project at https://supabase.com
 
-Create a table named employees
+ • Create a table named employees
 
-Obtain the following from the Supabase dashboard:
+ • Obtain the following from the Supabase dashboard:
 
-Project URL
+   • Project URL
 
-Anon Public Key
+   • Anon Public Key
 
-Create a file named supabase.js and configure:
-js
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+ • Create a file named supabase.js and configure:
 
+    const SUPABASE_URL = "YOUR_SUPABASE_URL";
+    const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
 
 Do not commit real credentials to public repositories.
 
 3. Run the Application
 
-Open 
-bash
-index.html
-directly in a web browser.
+Open index.html directly in a web browser.
 
 No local server is required.
 
