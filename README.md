@@ -1,20 +1,25 @@
-Employee Management System (Supabase)
+Employee Management System
 
-A modern web-based Employee Management System built using HTML, CSS, JavaScript, and Supabase (PostgreSQL).
+A production-style Employee Management System built using HTML, CSS, JavaScript, and Supabase (PostgreSQL).
+The application provides a structured interface for managing employee records with persistent cloud storage, data validation, and export capabilities.
 
-This project allows managing employee records with full CRUD operations, validations, and export features using a cloud database.
+This project demonstrates practical implementation of CRUD operations, RESTful data access, and client-side data processing.
 
-🚀Features:
+Overview
 
-✅ Add, Edit, Delete Employees
+The system is designed to manage organizational employee records in a centralized database. It supports creation, modification, deletion, retrieval, and exporting of employee data through a clean web-based interface backed by Supabase.
 
-🔍 Employee List with Search & Status Filter
+Key Features
 
-📞 Phone Number with Country Code & Flag (intl-tel-input)
+Full CRUD operations on employee records
 
-🛡️ Field Validations (Name, Salary, Phone Number, etc.)
+Search and status-based filtering
 
-📤 Export Employee Data:
+Input validation for critical fields
+
+International phone number input with country code support
+
+Data export functionality:
 
 CSV
 
@@ -24,38 +29,35 @@ PDF
 
 Print
 
-☑️ Select & Export Individual Employee Records
+Selection and export of individual records
 
-📱 Fully Responsive Admin Dashboard
+Responsive administrative interface
 
-☁️ Cloud Database using Supabase (PostgreSQL)
+Cloud-hosted PostgreSQL database using Supabase
 
-🔐 Ready for Auth & Role-based access (can be extended)
+Technology Stack
 
-🛠️ Technologies Used:
-
-Frontend:
+Frontend
 
 HTML5
 
 CSS3
 
-JavaScript
+JavaScript (Vanilla)
 
-Backend / Database:
+Backend / Database
 
 Supabase (PostgreSQL, REST API)
 
-Libraries:
+Third-party Libraries
 
 intl-tel-input
 
 SheetJS (xlsx)
 
-jsPDF & jsPDF-AutoTable
+jsPDF, jsPDF-AutoTable
 
-📂 Project Structure:
-
+Project Structure
 employee-management-system/
 │
 ├── index.html
@@ -73,62 +75,70 @@ employee-management-system/
 ├── supabase.js
 └── README.md
 
-⚙️ Setup & Run the Project:
-
-1️⃣ Clone the repository
+Setup and Configuration
+1. Clone the Repository
+bash
 git clone https://github.com/Arief-1203/employee-management-system.git
-
 cd employee-management-system
 
-2️⃣ Create Supabase Project
+3. Supabase Configuration
 
-Go to https://supabase.com
+Create a project at https://supabase.com
 
-Create a new project
+Create a table named employees
 
-Create an employees table
-
-Get:
+Obtain the following from the Supabase dashboard:
 
 Project URL
 
 Anon Public Key
 
-3️⃣ Configure Supabase
-
-Create a file called:
-
-supabase.js
-
-
-Add:
-
+Create a file named supabase.js and configure:
+js
 const SUPABASE_URL = "YOUR_SUPABASE_URL";
 const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
 
 
-⚠️ Do NOT commit real keys to GitHub
-Use .env or placeholders if public.
+Do not commit real credentials to public repositories.
 
-4️⃣ Run the Project
+3. Run the Application
 
-Just open:
-
+Open 
+bash
 index.html
+directly in a web browser.
 
+No local server is required.
 
-in your browser ✅
+Example Database Schema
 
-(No server required)
+Table: employees
 
-Database Table Structure :
-Screenshots:
-<img width="1920" height="993" alt="image" src="https://github.com/user-attachments/assets/3cbec0fc-7972-4e8b-8d70-aacce4f8f28c" />
+Column	Type	Description
+id	bigint	Primary key
+name	text	Employee name
+phone	text	Contact number
+salary	numeric	Salary
+department	text	Department name
+status	text	Employment status
+created_at	timestamp	Record creation time
+Security Considerations
 
+API keys should not be committed to the repository.
 
-Author:
+Row Level Security (RLS) should be enabled in Supabase for production use.
+
+Authentication and role-based access control can be added as an extension.
+
+Author
+
 Mohamed Arief
-Intern | Web Development | Full Stack Project
+Computer Science Engineering Student
 
-📧 Email: mohamedarief1203@gmail.com
-🔗 GitHub: https://github.com/Arief-1203
+Email: mohamedarief1203@gmail.com
+
+GitHub: https://github.com/Arief-1203
+
+License
+
+This project is intended for educational and portfolio use.
