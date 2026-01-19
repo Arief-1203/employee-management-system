@@ -5,15 +5,11 @@ The application provides a structured interface for managing employee records wi
 
 This project demonstrates practical implementation of CRUD operations, RESTful data access, and client-side data processing.
 
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
-Overview
+Overview :
 
 The system is designed to manage organizational employee records in a centralized database. It supports creation, modification, deletion, retrieval, and exporting of employee data through a clean web-based interface backed by Supabase.
 
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
-Key Features
+Key Features :
 
  • Full CRUD operations on employee records
 
@@ -39,60 +35,56 @@ Key Features
 
  • Cloud-hosted PostgreSQL database using Supabase
  
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Technology Stack :
 
-Technology Stack
+ • Frontend
 
-Frontend
+ • HTML5
 
-HTML5
+ • CSS3
 
-CSS3
+ • JavaScript (Vanilla)
 
-JavaScript (Vanilla)
+ • Backend / Database
 
-Backend / Database
+ • Supabase (PostgreSQL, REST API)
 
-Supabase (PostgreSQL, REST API)
+ • Third-party Libraries
 
-Third-party Libraries
+   • intl-tel-input
 
-intl-tel-input
+   • SheetJS (xlsx)
 
-SheetJS (xlsx)
+ • jsPDF, jsPDF-AutoTable
 
-jsPDF, jsPDF-AutoTable
+Project Structure :
 
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+employee-management-system
 
-Project Structure:
-employee-management-system/
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── employee-list.html
-├── employee-list.css
-├── employee-list.js
-│
-├── dashboard.html
-├── dashboard.css
-├── dashboard.js
-│
-├── supabase.js
-└── README.md
+── index.html
+── style.css
+── script.js
 
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── employee-list.html
+── employee-list.css
+── employee-list.js
+
+── dashboard.html
+── dashboard.css
+── dashboard.js
+
+── supabase.js
+── README.md
 
 Setup and Configuration:
-1. Clone the Repository
+
+1. Clone the Repository :
 bash
 git clone https://github.com/Arief-1203/employee-management-system.git
-
+bash
 cd employee-management-system
 
-2. Supabase Configuration
+2. Supabase Configuration :
 
  • Create a project at https://supabase.com
 
@@ -109,43 +101,29 @@ cd employee-management-system
     const SUPABASE_URL = "YOUR_SUPABASE_URL";
     const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
 
-Do not commit real credentials to public repositories.
+  Do not commit real credentials to public repositories.
 
-3. Run the Application
+3. Run the Application :
 
 Open index.html directly in a web browser.
-
 No local server is required.
 
-Example Database Schema
+Example Database Schema :
+<img width="1916" height="990" alt="image" src="https://github.com/user-attachments/assets/57be3190-14af-49e8-a3cc-e6e06668a8ed" />
 
-Table: employees
+Security Considerations :
 
-Column	Type	Description
-id	bigint	Primary key
-name	text	Employee name
-phone	text	Contact number
-salary	numeric	Salary
-department	text	Department name
-status	text	Employment status
-created_at	timestamp	Record creation time
-Security Considerations
+ • API keys should not be committed to the repository.
+ • Row Level Security (RLS) should be enabled in Supabase for production use.
+ • Authentication and role-based access control can be added as an extension.
 
-API keys should not be committed to the repository.
-
-Row Level Security (RLS) should be enabled in Supabase for production use.
-
-Authentication and role-based access control can be added as an extension.
-
-Author
+Author :
 
 Mohamed Arief
 Computer Science Engineering Student
 
 Email: mohamedarief1203@gmail.com
-
 GitHub: https://github.com/Arief-1203
 
-License
-
+License :
 This project is intended for educational and portfolio use.
