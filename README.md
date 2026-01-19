@@ -78,12 +78,9 @@ employee-management-system
 
 Setup and Configuration :
 
-Clone the Repository :
-bash
-git clone https://github.com/Arief-1203/employee-management-system.git
-
-bash
-cd employee-management-system
+ • Clone the Repository git clone https://github.com/Arief-1203/employee-management-system.git
+ 
+    • cd employee-management-system
 
 Supabase Configuration :
 
