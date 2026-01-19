@@ -76,15 +76,16 @@ employee-management-system
 ── supabase.js
 ── README.md
 
-Setup and Configuration:
+Setup and Configuration :
 
-1. Clone the Repository :
+Clone the Repository :
 bash
 git clone https://github.com/Arief-1203/employee-management-system.git
+
 bash
 cd employee-management-system
 
-2. Supabase Configuration :
+Supabase Configuration :
 
  • Create a project at https://supabase.com
 
@@ -103,7 +104,7 @@ cd employee-management-system
 
   Do not commit real credentials to public repositories.
 
-3. Run the Application :
+ Run the Application :
 
 Open index.html directly in a web browser.
 No local server is required.
@@ -114,7 +115,9 @@ Example Database Schema :
 Security Considerations :
 
  • API keys should not be committed to the repository.
+ 
  • Row Level Security (RLS) should be enabled in Supabase for production use.
+ 
  • Authentication and role-based access control can be added as an extension.
 
 Author :
