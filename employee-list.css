@@ -201,6 +201,9 @@ tbody tr:nth-child(even) {
 .export-menu.show {
   display: block;
 }
+
+
+
 /* ===== CLOUD PREMIUM EXPORT BUTTON ===== */
 .btn-export {
   all: unset;
@@ -304,6 +307,36 @@ tbody tr:nth-child(even) {
   color: #3b2fd9;
   transform: translateX(4px);
 }
+
+/* ===== PAGINATION ===== */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0 40px;
+}
+
+.pagination-container button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #e9eef5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination-container button.active {
+  background: #6a5af9;
+  color: white;
+}
+
+.pagination-container button:hover {
+  background: #dbe3f0;
+}
+
+
+
+
 
 
 
