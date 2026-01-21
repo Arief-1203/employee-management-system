@@ -1,3 +1,6 @@
+let currentPage = 1;
+const rowsPerPage = 12; // change this to 5, 10, 20 as you want
+
 let allEmployees = [];
 
 // Load when page opens
@@ -25,7 +28,11 @@ function renderTable(data) {
   const tbody = document.getElementById("employeeTableBody");
   tbody.innerHTML = "";
 
-  data.forEach(emp => {
+  const start = (currentPage - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+  const pageData = data.slice(start, end);
+
+  pageData.forEach(emp => {
     tbody.innerHTML += `
       <tr>
         <td>
@@ -47,7 +54,10 @@ function renderTable(data) {
       </tr>
     `;
   });
+
+  renderPagination(data.length);
 }
+
 
 // ================= DELETE =================
 async function deleteEmployee(id) {
@@ -78,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusFilter = document.getElementById("statusFilter");
 
   function applyFilters() {
+    currentPage = 1;
+
     const searchValue = searchInput.value.toLowerCase();
     const statusValue = statusFilter.value;
 
@@ -238,6 +250,53 @@ function toggleExportMenu() {
   const menu = document.getElementById("exportMenu");
   menu.classList.toggle("show");
 }
+
+
+function renderPagination(totalRows) {
+  const container = document.getElementById("pagination");
+  container.innerHTML = "";
+
+  const totalPages = Math.ceil(totalRows / rowsPerPage);
+
+  // Prev button
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "Prev";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => {
+    currentPage--;
+    renderTable(allEmployees);
+  };
+  container.appendChild(prevBtn);
+
+  // Page numbers
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === currentPage) btn.classList.add("active");
+
+    btn.onclick = () => {
+      currentPage = i;
+      renderTable(allEmployees);
+    };
+
+    container.appendChild(btn);
+  }
+
+  // Next button
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.onclick = () => {
+    currentPage++;
+    renderTable(allEmployees);
+  };
+  container.appendChild(nextBtn);
+}
+
+
+
+
+
 
 
 
