@@ -139,7 +139,7 @@ function goToList() {
 }
 
 function goToDashboard() {
-  window.location.href = "dashboard.html";
+  window.location.href = "index.html";
 }
 
 function getValue(id) {
@@ -222,4 +222,5 @@ if (phoneInput) {
     }
   });
 }
+
 
