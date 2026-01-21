@@ -79,7 +79,7 @@ async function deleteEmployee(id) {
 
 // ================= EDIT =================
 function editEmployee(id) {
-  window.location.href = `index.html?id=${id}`;
+  window.location.href = `form.html?id=${id}`;
 }
 
 // ================= SEARCH + FILTER =================
@@ -292,6 +292,7 @@ function renderPagination(totalRows) {
   };
   container.appendChild(nextBtn);
 }
+
 
 
 
